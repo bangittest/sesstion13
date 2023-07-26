@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        var str = 'c';
+        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        var result = [];
+
+        for (var x = 0; x < str.length; x++) {
+            if (UPPER.indexOf(str[x]) !== -1) {
+                result.push(str[x].toLowerCase());
+            }
+            else if (LOWER.indexOf(str[x]) !== -1) {
+                result.push(str[x].toUpperCase());
+            }
+            else {
+                result.push(str[x]);
+            }
+        }
+        console.log(result.join(''));
+
+    </script> -->
+
+    <!-- <script>
+        // Thực hành 2: đảo ngược mảng
+
+        const arr = "nguyen minh huy" // chuỗi cần đảo ngược
+
+        let doDaiMang = arr.length // lấy độ dài của chuỗi
+        let arr2 = "" // chuỗi kết quả; yuh hnim ....
+
+        // i = doDaiMang - 1: là giữ vị trí ở cuối chuỗi
+        // i -- : lùi dần về đầu chuỗi
+        // i >= 0 : vẫn còn chuỗi để lùi
+        for (let i = doDaiMang - 1; i >= 0; i--) {
+            // thêm các phần tử cho chuỗi kết quả bằng các phần tử của chuỗi ban đầu
+            // theo thứ tự từ cuối về đầu vì mình lặp từ cuối chuỗi về đầu chuỗi
+            arr2 += arr[i]
+        }
+        console.log(arr2.split(""));
+        console.log(arr.split(""),)
+    </script> -->
+
+    <!-- <script>
+        // Bài 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường 
+        // trong chuỗi vừa nhập sang thành dạng chữ hoa.
+        // Ví dụ: nếu bạn nhập vào chuỗi 'Keep Calm And Code On' 
+        // kết quả của chương trình là 'kEEP cALM aND cODE oN'.
+
+        let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // khai báo bảng chữ hoa
+        let chuThuong = 'abcdefghijklmnopqrstuvwxyz'; // khai báo bảng chữ thường
+        // ==> độ dài hai bảng như nhau và vị trí các chữ tương ứng như nhau
+
+        let chuoi = prompt("Nhap vao mot chuoi ma ban muon") // cho người dùng nhập
+        let ketQua = [] // biến lưu kết quả
+
+        // vòng lặp để kiểm tra từng chữ trong chuỗi nhập và chuyển đổi nó thành hoa thường
+        for (let i = 0; i < chuoi.length; i++) {
+            // nếu là dấu khoảng trắng thì thêm luôn vào kết quả mà ko cần kiểm tra
+            if (chuoi[i] == " ") {
+                ketQua.push(" ")
+                continue
+            }
+
+            // nếu là chữ thì đi kiểm tra với từng chữ trong bảng chữ cái
+            for (let j = 0; j < chuHoa.length; j++) {
+                // nếu là chữ Hoa thì đổi thành chữ Thường
+                // nếu là chữ Thường thì đổi thành chữ Hoa
+                if (chuoi[i] == chuHoa[j]) {
+                    ketQua.push(chuThuong[j])
+                } else if (chuoi[i] == chuThuong[j]) {
+                    ketQua.push(chuHoa[j])
+                }
+            }
+        }
+
+        console.log(ketQua.join(""));
+    </script> -->
+
+    <script>
+        // Bài tập 10: làm việc với ghi chú(todoList) (C/R/U/D)
+        // tạo ghi chú mới (C)
+        // xem tất cả ghi chú (R)
+        // sửa một ghi chú nào đấy(U)
+        // xóa một ghi chú nào đấy(D)
+        // người dùng sẽ được liên tục C/R/U/D cho đến khi nhập 0 thì thoát chương trình
+
+        const todoList = ["rua rau", "giat do"] // Khai báo mảng ghi chú có sẵn
+
+        let hanhdong; // nhập hành động muốn làm lần đầu
+
+        // vòng lặp kiểm tra xem muốn làm hành động nào, 
+        //sau khi làm xong hành động đó thì cho nhập để thực hiện hành động khác 
+        while (true) {
+            hanhdong = prompt("Nhap vao hanh dong ban C/R/U/D va 0 de ket thuc")
+            // nếu là C thì thêm ghi chú
+            if (hanhdong == "C") {
+                let congViec = prompt("Nhap cong viec ban muon lam") // cho người dùng nhập ghi chú của họ
+                todoList.push(congViec) // thêm ghi chú vào mảng
+                console.log(todoList); // in ghi chú cho người dùng xem đã thêm được chưa
+            } else if (hanhdong == "R") { // nếu là R thì in ra danh sách ghi chú
+                console.log(todoList);
+            } else if (hanhdong == "U") { // nếu là U thì sẽ cho sửa một ghi chú nào đó
+                let vitri // biến lưu vị trí mà người dùng muốn sửa
+                // vòng lặp để cho người dùng nhập vị trí cho đúng, sai là bắt nhập lại
+                do {
+                    vitri = Number(prompt(`Nhap vi tri ban muon sua ( 0 - ${todoList.length - 1})`))
+                } while (vitri < 0 || vitri >= todoList.length)
+                // sau khi có vị trí thì cho người dùng nhập công việc mà họ muốn đổi
+                let suaCongViec = prompt("Nhap cong viec ban muon sua thanh")
+                todoList[vitri] = suaCongViec // sửa lại công việc trong mảng
+                console.log(todoList); // in ra danh sách công việc
+            } else if (hanhdong == "D") { // nếu là D thì sẽ xóa một ghi chú nào đấy
+                let vitri // vị trí muốn xóa
+                // vòng lặp để bắt nhập đúng vị trị cho phép
+                do {
+                    vitri = Number(prompt(`Nhap vi tri ban muon xoa ( 0 - ${todoList.length - 1})`))
+                } while (vitri < 0 || vitri >= todoList.length)
+                todoList.splice(vitri, 1) // xóa công việc tại vị trí đã chọn
+                console.log(todoList); // in lại danh sách ghi chú
+            } else if (hanhdong == 0) { // thoát chương trình
+                break;
+            } else { } // khi người dùng nhập khác C/R/U/D/0 thì bắt nhập lại
+            // cho người dùng nhập lại hành động để thực hiện cho lần sau
+        }
+    </script>
+</body>
+
+</html>

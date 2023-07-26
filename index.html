@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script src="js/main.js"></script> -->
+    <!-- <script src="js/baitap1.js"></script> -->
+
+    <!-- <body style="padding-top: 50px;">
+        <input type="text" id="txtValue" />
+        <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();" />
+        <input type="button" id="btnDisplay" value="Display" onclick="display_array();" />
+        <div id="result"></div>
+ -->
+
+    <!-- <script>
+            let x = 0;
+            let array = Array();
+            function add_element_to_array() {
+                array[x] = document.getElementById("txtValue").value;
+                alert("Element: " + array[x] + " Added at index " + x);
+                x++;
+                document.getElementById("txtValue ").value = "";
+            }
+            function display_array() {
+                let e = "<hr/>";
+                for (let i = 0; i < array.length; i++) {
+                    e += "Element " + i + " = " + array[i] + "<br/>";
+                }
+                document.getElementById("result").innerHTML = e;
+            }
+        </script> -->
+
+
+
+    <!-- <script>
+        let x = [-3, 5, 1, 3, 2, 10];
+        let first = 0;
+        let last = x.length - 1;
+        while (first < last) {
+            let b = x[first];
+            x[first] = x[last];
+            x[last] = b;
+            first++
+            last--;
+        }
+        document.write(x)
+    </script> -->
+    <!-- <script>
+        let value = prompt("Enter a number: ");
+        let numbers = [-3, 5, 1, 3, 2, 10];
+        for (let i = 0; i < numbers.length; i++) {
+            if (value == numbers[i]) {
+                alert("Value " + numbers[i] + "found at " + i);
+            }
+        }
+    </script> -->
+    <!-- <script>
+        let array = [];
+        for (let i = 0; i < 5; i++) {
+            array.push(i);
+        }
+        console.log("Sử dụng phương thức push()", array); // array =[0,1,2,3,4]
+
+        let a = 10;
+        array.unshift(a);
+        console.log("Sử dụng phương thức unshift()", array); // array=[10,0,1,2,3]
+
+        array.pop();
+        console.log("Sử dụng phương thức pop()", array); // aray=[10,0,1,2,3]
+
+        array.shift()
+        console.log("Sử dụng phương thức shift()", array); // array= [0,1,2,3]
+
+        array.splice(1, 2)
+        console.log("Sử dụng phương thức splice()", array); // array =[0,3]
+    </script> -->
+    <!-- 
+    <script>
+        // Tìm giá trị trong mảng
+        let array = [1, 2, 3, 4, 5, 6];
+        let n = prompt("Nhập vào số bất kỳ");
+
+        let check = false;
+        for (let i = 0; i < array.length; i++) {
+            if (n == array[i]) {
+                check = true;
+            }
+        }
+
+        if (check == true) {
+            alert("Bingo");
+        } else {
+            alert("Chúc bạn may mắn lần sau");
+        }
+
+    </script> -->
+
+    <!-- <script>
+        // VD: 1,3,5,12,65,98
+        let n = prompt("Nhập vào đây số bất kỳ được ngăn cách bởi dấu ,");
+        let convert = n.split(",");
+        consoloe.log("Chuyển đổi string sang array", convert); // convert=[1,3,5,12,65,98]
+
+        let array = [];
+        for (i = convert.length - 1; i >= 0; i--) {
+            array.push(convert[i]);
+            console.log("Đảo ngược các phần tử", array); // array =[98,65,12,5,3,1]
+        }
+    </script> -->
+    <script>
+        let myColor = ["Lion", "Tiger", "Wolf", "Kangaroo"];
+        // console.log(`\"${myColor.join(",")}\"`)
+        console.log(`"${myColor.join(",")}"`)
+    </script>
+</body>
+
+</html>

@@ -10,7 +10,7 @@
 <body>
 
 
-    <script>
+    <!-- <script>
         let text = prompt(`nhap tu dien`)
 
         let arrEn = ["hello", "good bye", "cat", "dog"]
@@ -28,7 +28,244 @@
         if (check == false) {
             console.log("khong tim thay")
         }
+    </script> -->
+
+    <!-- Viết chương trình khởi tạo nhập vào một mảng số
+     nguyên. Hiển hiện giá trị lớn nhất trong mảng đó và giá trị trung bình
+    của các phần tử trong mảng. -->
+    <!-- <script>
+        let x=[2,4,6,7,4,15]
+
+    </script> -->
+
+    <!-- Bài 4: Viết chương trình khởi tạo nhập vào một mảng số
+     nguyên và đảo ngược các phần tử trong mảng đó. -->
+
+    <!-- <script>
+        let string = prompt(`nhap so nguyen duong`);
+        let cout = 0;
+        let arr = string.split("")
+        for (const value of arr) {
+            if (value > 0) {
+                cout++
+            }
+        }
+        console.log(`${cout}`);
+
+    </script> -->
+
+    <!-- <script>
+        let st = prompt(`nhap vao mot chuoi`)
+        let cout = 0;
+        for (let i = 0; i <= st.length; i++) {
+            if (st[i] == " ") {
+                cout++
+            }
+        }
+        console.log(cout + 1);
+    </script> -->
+
+
+
+
+
+
+    <!-- // Bài 3: Viết một chương trình khai báo một mảng ký tự. In ra số “ký tự số” trong mảng.
+
+let kyTu = ["n", "0", "g", "6", "3"];
+
+// cach 1
+for (i = 0; i < kyTu.length; i++) {
+    if (parseInt(kyTu[i]) === 0) {
+        console.log(kyTu[i]);
+    } else if (!parseInt(kyTu[i])) {
+        continue;
+    } else {
+        console.log(kyTu[i]);
+    }
+}
+
+// cach 2
+for (let i = 0; i < kyTu.length; i++) {
+    if (kyTu[i] < 0 || kyTu[i] >= 0) {
+        console.log(kyTu[i]);
+    }
+} -->
+
+
+
+    <!-- <script>
+        //         Bài 7: Viết chương trình khởi tạo nhập vào một mảng số
+        //          nguyên gồm 10 phần tử.Nhập phần tử số nguyên và kiểm tra xem số 
+        //          đó có thuộc mảng đã cho không ? Nếu có thuộc mảng đã cho xoá số đó khỏi mảng.
+
+        // Gợi ý: Việc xoá ở đây tức là dịch phần tử ở bên phải số đã 
+        // nhập sang vị trí của số đó, và gán 0 cho phần tử cuối cùng của mảng.
+
+        const a = 10;
+        let arr = []
+        let arrDelete = []
+        for (let i = 0; i < a; i++) {
+            let n = +prompt(`nhap phan tu thu ${i + 1} cua mang 10 phan tu`)
+            arr.push(n)
+        }
+        let num = +prompt("nhap 1 so nguyen de xoa");
+        let check = false
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === num) {
+                check = true;
+            } else {
+                arrDelete.push(arr[i])
+            }
+        }
+        if (check) {
+            arr = arrDelete
+        } else {
+            alert("Khong ton tai gia tri trong mang")
+        }
+        console.log(arr)
+
+    </script> -->
+
+    <!-- <script>
+        // Bài 8: Viết chương trình khởi tạo nhập vào một mảng số nguyên gồm 10 phần tử.
+        // Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+
+        let n = +prompt(`nhap vao 1  mang so nguyen`)
+        let arr = []
+        for (let i = 0; i < n; i++) {
+            let chuoi = +prompt(`hay nhap so nguyen theo thu tu ${i + 1} den 10`);
+            arr.push(chuoi)
+        }
+        for (i = 0; i < arr.length - 1; i++) {
+            for (j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + i]) {
+                    let c = arr[j]
+                    arr[j] = arr[j + 1]
+                    arr[j + 1] = c
+
+                }
+
+            }
+        }
+        console.log(arr)
+    </script> -->
+
+    <!-- <script>
+        // Bài 1: Viết chương trình khởi tạo mảng 
+        // 2 chiều, gồm một bộ các phần tử có sẵn, in ra các phần tử trong mảng.
+
+        let a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+        for (let i in a) {
+            console.log("row" + i);
+            for (let j in a[i]) {
+                console.log("" + a[i][j]);
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        let a = ['c', 's', 'c', '2', '6', '1']
+        console.log(a.reverse().join(""))
+    </script> -->
+
+
+    <!-- <script>
+        let a =[]
+        let b=[]
+        for(i=0 ;i<10;i++){
+            let nhap=+prompt(`nhap phan tu ${i+1}`)
+            a.push[i]
+
+        }
+    </script> -->
+
+    <!-- Bài 5: Viết một chương trình nhập vào 2 chuỗi, 
+sau đó kiểm tra xem hai chuỗi có giống nhau hay không. -->
+    <!-- <script>
+        let n = +prompt(`nhap vao 2 chuoi`)
+        let a = []
+        let b = []
+        for (let i = 0; i <= n.length; i++) {
+            a.push[i]
+            
+
+        }
+    </script> -->
+
+
+    <!-- <script>
+        let chuoi = prompt(`dem so tu trong 1 chuoi`)
+        count = 0
+        chuoi = chuoi.split(" ")
+        for (let i = 0; i < chuoi.length; i++) {
+            if (chuoi[i] != "")
+                count++
+        }
+
+        console.log(count)
+    </script> -->
+
+    <!-- <script>
+        let chuoi1 = prompt(`nhap chuoi 1`);
+        let chuoi2 = prompt(`nhap chuoi 2`);
+        console.log(chuoi1);
+        console.log(chuoi2);
+        if (chuoi1.length !== chuoi2.length) {
+            console.log("hai chuoi giong nhau")
+        }
+
+    </script> -->
+
+
+    <!-- <script>
+
+        let arr = prompt(`nhap 1 mang vao day`)
+
+        let arr2 = arr.split("")
+        for (let i = 0; i < arr2.length; i++) {
+            if (arr2[i] == "-") {
+                arr2[i] = "_";
+            }
+        }
+        console.log(arr2);
+
+    </script> -->
+
+    <script>
+        // Bài 3: Viết một chương trình khai báo một mảng ký tự. In ra số “ký tự số” trong mảng.
+
+        let kyTu = ["n", "0", "g", "6", "3"];
+
+        // cach 1
+        for (i = 0; i < kyTu.length; i++) {
+            if (parseInt(kyTu[i]) === 0) {
+                console.log(kyTu[i]);
+            } else if (!parseInt(kyTu[i])) {
+                continue;
+            } else {
+                console.log(kyTu[i]);
+            }
+        }
+
+        // cach 2
+        for (let i = 0; i < kyTu.length; i++) {
+            if (kyTu[i] < 0 || kyTu[i] >= 0) {
+                console.log(kyTu[i]);
+            }
+        }
     </script>
+
+
+
+
 </body>
+
 
 </html>

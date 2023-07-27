@@ -85,7 +85,141 @@
         console.log(ketQua.join(""));
     </script> -->
 
-    <script>
+
+    <!-- <script>
+        let text = prompt(`nguoi nhap vao`)
+        let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let chuThuong = 'abcdefghijklmnopqrstuvwxyz';
+        let sum = []
+        for (let index = 0; index < text.length; index++) {
+            if (text[index] == " ") {
+                sum.push(" ")
+                continue
+            }
+            for (let i = 0; i < chuHoa.length; i++) {
+                if (text[index] == chuHoa[i]) {
+                    sum.push(chuThuong[i])
+
+                } else if (text[index] == chuThuong[i]) {
+                    sum.push(chuHoa[i])
+
+                }
+            }
+        }
+        console.log(sum.join(""))
+    </script> -->
+
+
+
+
+    <!-- <script>
+        let text = prompt(`nguoi dung nhap vao`)
+        let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let chuThuong = 'abcdefghijklmnopqrstuvwxyz';
+        let sum = [];
+        for (let index = 0; index < text.length; index++) {
+            if (text[index] == " ") {
+                sum.push(" ")
+                continue;
+            }
+            for (let i = 0; i < chuHoa.length; i++) {
+                if (text[index] == chuHoa[i]) {
+                    sum.push(chuThuong[i])
+                } else if (text[index] == chuThuong[i]) {
+                    sum.push(chuHoa[i])
+                }
+            }
+        }
+        console.log(sum.join(" "))
+    </script> -->
+
+
+
+    <!-- <script>
+        let nhap = prompt(`nhap tu de tra`)
+        let arrEng = ["hello", "cat", "bee", "chicken", "pet", "meet"]
+        let arrVie = ["xin chao", "meo", "ong", "ga", "cho", "lon"]
+        let flag = false;
+        let arr = []
+        for (let index = 0; index < arrEng.length; index++) {
+            if (arrEng[index] == nhap) {
+
+                flag = true;
+                arr.push(arrVie[index])
+                break;
+
+            }
+        }
+        if (flag == false) {
+            arr.push(`khong tim thay gia tri`)
+        }
+        console.log(arr.join(""))
+    </script> -->
+
+
+
+
+
+
+
+
+    <!-- <script>
+        let text = prompt(`nhap tu dien de tra`)
+        let arrEng = ["hello", "bee", "chicked", "pet"]
+        let arrVie = ["xin chao", "ong", "ga", "cho"]
+        let sum = []
+        let flag = false
+        for (let index = 0; index < arrEng.length; index++) {
+            if (arrEng[index] == text) {
+                sum = (arrVie[index]);
+                flag = true;
+                break;
+            }
+
+        }
+        if (flag == false) {
+            sum = (`khong co gia tri`)
+        }
+        console.log(sum)
+    </script> -->
+
+
+
+
+    <!-- <script>
+        let text = prompt(`nhap vao 1 tu de tra`)
+        let arrEng = ["hello", "cat", "pet", "chicken"];
+        let arrVie = ["xin chao", "meo", "cho", "ga"]
+        let kq = []
+        let flag = false;
+        for (let index = 0; index < arrEng.length; index++) {
+            if (arrEng[index] == text) {
+                kq.push(arrVie[index])
+                flag = true;
+                break;
+            }
+        }
+        if (flag == false) {
+            kq.push(`khong tim thay`)
+        }
+
+        console.log(kq.join(""));
+
+    </script> -->
+
+
+
+    <!-- <script>
+        let myColor = ["Lion", "Tiger", "Wolf", "Kangaroo"]
+        console.log(`"${myColor}"`);
+    </script> -->
+
+
+
+
+
+
+    <!-- <script>
         // Bài tập 10: làm việc với ghi chú(todoList) (C/R/U/D)
         // tạo ghi chú mới (C)
         // xem tất cả ghi chú (R)
@@ -95,12 +229,11 @@
 
         const todoList = ["rua rau", "giat do"] // Khai báo mảng ghi chú có sẵn
 
-        let hanhdong; // nhập hành động muốn làm lần đầu
+        let hanhdong = prompt("Nhap vao hanh dong ban C/R/U/D va 0 de ket thuc") // nhập hành động muốn làm lần đầu
 
         // vòng lặp kiểm tra xem muốn làm hành động nào, 
         //sau khi làm xong hành động đó thì cho nhập để thực hiện hành động khác 
         while (true) {
-            hanhdong = prompt("Nhap vao hanh dong ban C/R/U/D va 0 de ket thuc")
             // nếu là C thì thêm ghi chú
             if (hanhdong == "C") {
                 let congViec = prompt("Nhap cong viec ban muon lam") // cho người dùng nhập ghi chú của họ
@@ -129,8 +262,117 @@
             } else if (hanhdong == 0) { // thoát chương trình
                 break;
             } else { } // khi người dùng nhập khác C/R/U/D/0 thì bắt nhập lại
-            // cho người dùng nhập lại hành động để thực hiện cho lần sau
+            hanhdong = prompt("Nhap vao hanh dong ban C/R/U/D va 0 de ket thuc") // cho người dùng nhập lại hành động để thực hiện cho lần sau
         }
+    </script> -->
+
+    <script>
+        // Bài tập 10: làm việc với ghi chú(todoList) (C/R/U/D)
+        // tạo ghi chú mới (C)
+        // xem tất cả ghi chú (R)
+        // sửa một ghi chú nào đấy(U)
+        // xóa một ghi chú nào đấy(D)
+        // người dùng sẽ được liên tục C/R/U/D cho đến khi nhập 0 thì thoát chương trình
+        let todo = ["rua rau", "an com"]
+        let hanhd;
+
+        while (true) {
+            hanhd = prompt(`người dùng sẽ được liên tục C/R/U/D cho đến khi nhập 0 thì thoát chương trình`);
+            if (hanhd == "C") {
+                let Cv = prompt(`nhap cong viec ban muon lam`)
+                todo.push(Cv)
+                console.log(todo)
+            } else if (hanhd == "R") {
+                console.log(todo)
+            } else if (hanhd == "U") {
+                let vitri
+                do {
+                    vitri = +prompt(`vi tri ban muon sua (0-${todo.length - 1})`)
+                } while (vitri < 0 || vitri >= todo.length)
+                let suaCv = prompt(`nhap cong viec ban muon sua`)
+                todo[vitri] = suaCv
+                console.log(todo)
+            } else if (hanhd == "D") {
+                let vitri;
+                do {
+                    vitri = +prompt(`vi tri ban muon xoa (0-${todo.length - 1})`)
+
+                } while (vitri || vitri >= todo.length)
+                todo.splice(vitri, 1)
+                console.log(todo)
+            } else if (hanhd == 0) {
+                break
+            }
+        }
+    </script>
+
+
+    <!-- <script>
+        // Bài tập 11: shopping
+
+        // mảng các sản phẩm có ở cửa hàng
+        const bakery = ["socola", "chuoi", "cam", "tao", "xoai"];
+        // mảng các sản phẩm đã mua
+        const cart = []
+
+        // in ra các sản phẩm có ở cửa hàng
+        console.log(bakery);
+
+        let traLoi = "" // lưu câu trả lời để biết xem có mua nữa hay không
+        while (traLoi != "no") {
+            // nhập sản phẩm muốn mua
+            let sanPham = prompt("Nhap vao san pham ban muon")
+
+            // dùng làm includes để xem sản phẩm đó có trong mảng bakery hay không (hàm này mọi người tự tìm hiểu)
+            // nếu có thì tiến hành thêm hoặc cập nhật
+            if (bakery.includes(sanPham)) {
+                let check = false // biến lưu kết quả xem có trong giở hay chưa
+                let vitri // biến lưu vị trí của sản phẩm trong giỏ nếu sản phẩm đã có
+                // vòng lặp kiểm tra xem có trong giỏ hay chưa
+                for (let i = 0; i < cart.length; i++) {
+                    // nếu có trong giỏ thì lưu lại vị trí trong giỏ và cập nhật true để xác nhận đã có
+                    if (sanPham == cart[i][0]) {
+                        check = true
+                        vitri = i
+                    }
+                }
+
+                // nếu chưa có trong giỏ thì thêm vào giở với số lượng ban đầu là 1
+                if (check == false) {
+                    cart.push([sanPham, 1])
+                } else { // nếu có rồi thì tăng số lượng lên 1
+                    cart[vitri][1] += 1
+                }
+
+                console.log(cart); // sau khi thêm hoặc cập nhật lại giỏ thì in ra giỏ để xem
+
+                // vòng lặp nhập câu trả lời
+                do {
+                    traLoi = prompt("Ban co muon mua nua khong")
+                } while (traLoi != "yes" && traLoi != "no")
+                // nếu yes thì mua tiếp
+                // nếu no thì thoát chương trình
+                if (traLoi == "yes") {
+                    continue
+                } else {
+                    break;
+                }
+            } else { // nếu ko có sản phẩm bạn muốn trong cửa hàng thì in ra là không có
+                console.log("Cua hang ko co san pham nay");
+            }
+        }
+    </script> -->
+
+
+    <script>
+        //co 1 danh sach san pham
+        let products= ["chocolate", "marshmallow", "cookies", "chips"];
+        // co 1 san 
+        let carts=[]
+
+
+
+        
     </script>
 </body>
 
